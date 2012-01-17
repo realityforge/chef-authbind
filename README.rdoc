@@ -1,0 +1,11 @@
+= DESCRIPTION:
+
+Install the authbind tool to facilitate launching applications on privlidged ports. Also provide several resource
+definitions for executing a command under authbind.
+
+= REQUIREMENTS:
+
+= ATTRIBUTES:
+
+= USAGE:
+
