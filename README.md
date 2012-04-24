@@ -32,7 +32,7 @@ authbind_port resource
 
 Allow the glassfish user to bind to port 80.
 
-  authbind_port "AuthBind GlassFish Port 80" do
-    port 80
-    user 'glassfish'
-  end
+    authbind_port "AuthBind GlassFish Port 80" do
+        port 80
+        user 'glassfish'
+    end
