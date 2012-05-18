@@ -17,8 +17,8 @@
 action :add do
   file "/etc/authbind/byport/#{new_resource.port}" do
     owner new_resource.user
-    group "nogroup"
-    mode "0500"
+    group new_resource.group if new_resource.group
+    mode "0550"
     action :create
   end
 end

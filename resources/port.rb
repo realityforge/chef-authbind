@@ -18,6 +18,7 @@ actions :add, :remove
 
 attribute :port, :kind_of => Integer, :required => true
 attribute :user, :kind_of => String, :required => true
+attribute :group, :kind_of => String, :default => nil
 
 def initialize( *args )
   super
