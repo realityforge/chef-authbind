@@ -36,3 +36,14 @@ Allow the glassfish user to bind to port 80.
         port 80
         user 'glassfish'
     end
+
+authbind_addr resource
+----------------------
+
+Allow the glassfish user to bind to 10.2.3.4, port 80.
+
+    authbind_addr "AuthBind GlassFish 10.2.3.4, Port 80" do
+        addr '10.2.3.4'
+        port 80
+        user 'glassfish'
+    end
