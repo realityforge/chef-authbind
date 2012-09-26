@@ -3,7 +3,6 @@ Description
 
 Install the authbind tool to facilitate launching applications on privileged ports. Also provide several resource definitions for executing a command under authbind.
 
----
 Requirements
 ============
 
@@ -12,7 +11,6 @@ Platform
 
 * Debian, Ubuntu
 
----
 Recipes
 =======
 
@@ -21,7 +19,6 @@ default
 
 Include the default recipe in a run list, to get authbind installed.
 
----
 Usage
 =====
 
