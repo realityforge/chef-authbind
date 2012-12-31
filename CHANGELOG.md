@@ -1,3 +1,7 @@
+## v0.1.4:
+
+* Change  : Use default_action method in resource DSL to mark default actions.
+
 ## v0.1.3:
 
 * Enhance : Add authbind_addr resource. (Imported from John Whitley's work at https://github.com/jwhitley/authbind).
