@@ -1,6 +1,7 @@
 ## v0.1.4:
 
 * Change  : Use default_action method in resource DSL to mark default actions.
+* Enhance : Add dependency on cutlery to reuse notifying_action so LWRPs correctly notify.
 
 ## v0.1.3:
 
