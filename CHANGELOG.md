@@ -1,5 +1,7 @@
 ## v0.1.6:
 
+* Change  : Replace the use of cutlery dependency with Chef 11's use_inline_resources method.
+
 ## v0.1.4:
 
 * Change  : Use default_action method in resource DSL to mark default actions.

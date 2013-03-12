@@ -14,7 +14,9 @@
 # limitations under the License.
 #
 
-notifying_action :add do
+use_inline_resources
+
+action :add do
   file "/etc/authbind/byport/#{new_resource.port}" do
     owner new_resource.user
     group new_resource.group if new_resource.group
@@ -23,7 +25,7 @@ notifying_action :add do
   end
 end
 
-notifying_action :remove do
+action :remove do
   file "/etc/authbind/byport/#{new_resource.port}" do
     action :delete
   end
