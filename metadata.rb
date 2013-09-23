@@ -24,6 +24,4 @@ version          '0.1.7'
   supports os
 end
 
-depends 'cutlery'
-
 recipe 'authbind::default', 'Installs and configures Authbind'
