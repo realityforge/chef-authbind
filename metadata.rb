@@ -20,8 +20,5 @@ description      'Installs/Configures authbind and defines resources for managin
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.7'
 
-%w{ ubuntu debian }.each do |os|
-  supports os
-end
-
-recipe 'authbind::default', 'Installs and configures Authbind'
+supports 'ubuntu'
+supports 'debian'

@@ -14,6 +14,24 @@
 # limitations under the License.
 #
 
+=begin
+#<
+Enable or disable authbind for a particular port.
+
+@action add Enable authbind for a port.
+@action remove Disable authbind for a port.
+
+@section Examples
+
+Allow the glassfish user to bind to port 80.
+
+    authbind_port "AuthBind GlassFish Port 80" do
+        port 80
+        user 'glassfish'
+    end
+#>
+=end
+
 actions :add, :remove
 
 attribute :port, :kind_of => Integer, :required => true

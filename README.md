@@ -1,43 +1,54 @@
-Description
-===========
+# Description
 
 [![Build Status](https://secure.travis-ci.org/realityforge/chef-authbind.png?branch=master)](http://travis-ci.org/realityforge/chef-authbind)
 
 Install the authbind tool to facilitate launching applications on privileged ports. Also provide several resource definitions for executing a command under authbind.
 
-Requirements
-============
+# Requirements
 
-Platform
---------
+## Platform:
 
-* Debian, Ubuntu
+* Ubuntu
+* Debian
 
-Recipes
-=======
+## Cookbooks:
 
-default
--------
+* cutlery
 
-Include the default recipe in a run list, to get authbind installed.
+# Attributes
 
-Usage
-=====
+*No attributes defined*
 
-Simply include the `authbind` recipe to get authbind installed and use the providers to manage permission binding.
+# Recipes
 
-authbind_port resource
-----------------------
+* [authbind::default](#authbinddefault) - Install authbind.
 
-Allow the glassfish user to bind to port 80.
+## authbind::default
 
-    authbind_port "AuthBind GlassFish Port 80" do
-        port 80
-        user 'glassfish'
-    end
+Install authbind. Required for the LWRPs.
 
-authbind_addr resource
-----------------------
+# Resources
+
+* [authbind_addr](#authbind_addr) - Enable or disable authbind for a particular port on a particular interface.
+* [authbind_port](#authbind_port) - Enable or disable authbind for a particular port.
+
+## authbind_addr
+
+Enable or disable authbind for a particular port on a particular interface.
+
+### Actions
+
+- add: Enable authbind. Default action.
+- remove: Disable authbind.
+
+### Attribute Parameters
+
+- addr: 
+- port: 
+- user: 
+- group:  Defaults to <code>nil</code>.
+
+### Examples
 
 Allow the glassfish user to bind to 10.2.3.4, port 80.
 
@@ -46,3 +57,33 @@ Allow the glassfish user to bind to 10.2.3.4, port 80.
         port 80
         user 'glassfish'
     end
+
+## authbind_port
+
+Enable or disable authbind for a particular port.
+
+### Actions
+
+- add: Enable authbind for a port. Default action.
+- remove: Disable authbind for a port.
+
+### Attribute Parameters
+
+- port: 
+- user: 
+- group:  Defaults to <code>nil</code>.
+
+### Examples
+
+Allow the glassfish user to bind to port 80.
+
+    authbind_port "AuthBind GlassFish Port 80" do
+        port 80
+        user 'glassfish'
+    end
+
+# License and Maintainer
+
+Maintainer:: Peter Donald (<peter@realityforge.org>)
+
+License:: Apache 2.0

@@ -14,7 +14,11 @@
 # limitations under the License.
 #
 
-# Install authbind. Required for the resource definitions...
+=begin
+#<
+Install authbind. Required for the LWRPs.
+#>
+=end
 package "authbind" do
   action :install
 end
