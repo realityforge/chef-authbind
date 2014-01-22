@@ -43,9 +43,9 @@ Enable or disable authbind for a particular port on a particular interface.
 
 ### Attribute Parameters
 
-- addr: 
-- port: 
-- user: 
+- addr:
+- port:
+- user:
 - group:  Defaults to <code>nil</code>.
 
 ### Examples
@@ -69,8 +69,8 @@ Enable or disable authbind for a particular port.
 
 ### Attribute Parameters
 
-- port: 
-- user: 
+- port:
+- user:
 - group:  Defaults to <code>nil</code>.
 
 ### Examples
@@ -87,3 +87,4 @@ Allow the glassfish user to bind to port 80.
 Maintainer:: Peter Donald (<peter@realityforge.org>)
 
 License:: Apache 2.0
+
