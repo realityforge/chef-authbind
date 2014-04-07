@@ -87,4 +87,3 @@ Allow the glassfish user to bind to port 80.
 Maintainer:: Peter Donald (<peter@realityforge.org>)
 
 License:: Apache 2.0
-
