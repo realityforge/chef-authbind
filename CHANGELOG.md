@@ -1,5 +1,7 @@
 ## v0.1.8:
 
+* Change  : Remove outdated cutlery depends from cookbook metadata.
+
 ## v0.1.6:
 
 * Change  : Replace the use of cutlery dependency with Chef 11's use_inline_resources method.
