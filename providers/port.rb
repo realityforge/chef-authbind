@@ -16,7 +16,6 @@
 
 use_inline_resources
 
-
 action :add do
   port = new_resource.port
   port = port.to_s.prepend "!" if new_resource.port >= 512
