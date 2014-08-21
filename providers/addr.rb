@@ -17,7 +17,10 @@
 use_inline_resources
 
 action :add do
-  file "/etc/authbind/byaddr/#{new_resource.addr}:#{new_resource.port}" do
+  addr = "#{new_resource.addr}:#{new_resource.port}"
+  addr = addr.to_s.prepend "!" if new_resource.port >= 512
+
+  file "/etc/authbind/byaddr/#{addr}" do
     owner new_resource.user
     group new_resource.group if new_resource.group
     mode "0550"
@@ -26,6 +29,9 @@ action :add do
 end
 
 action :remove do
+  addr = "#{new_resource.addr}:#{new_resource.port}"
+  addr = addr.to_s.prepend "!" if new_resource.port >= 512
+
   file "/etc/authbind/byaddr/#{new_resource.addr}:#{new_resource.port}" do
     action :delete
   end
