@@ -32,7 +32,7 @@ action :remove do
   addr = "#{new_resource.addr}:#{new_resource.port}"
   addr = addr.to_s.prepend "!" if new_resource.port >= 512
 
-  file "/etc/authbind/byaddr/#{new_resource.addr}:#{new_resource.port}" do
+  file "/etc/authbind/byaddr/#{addr}" do
     action :delete
   end
 end
