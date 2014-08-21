@@ -16,8 +16,12 @@
 
 use_inline_resources
 
+
 action :add do
-  file "/etc/authbind/byport/#{new_resource.port}" do
+  port = new_resource.port
+  port = port.to_s.prepend "!" if new_resource.port >= 512
+
+  file "/etc/authbind/byport/#{port}" do
     owner new_resource.user
     group new_resource.group if new_resource.group
     mode "0550"
@@ -26,7 +30,10 @@ action :add do
 end
 
 action :remove do
-  file "/etc/authbind/byport/#{new_resource.port}" do
+  port = new_resource.port
+  port = port.to_s.prepend "!" if new_resource.port >= 512
+
+  file "/etc/authbind/byport/#{port}" do
     action :delete
   end
 end
