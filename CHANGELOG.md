@@ -1,5 +1,7 @@
 ## v0.1.10:
 
+* Fix     : Correctly handle ports >= 512. Submitted by Marius Sturm.
+
 ## v0.1.8:
 
 * Change  : Remove outdated cutlery depends from cookbook metadata.
