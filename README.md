@@ -1,6 +1,6 @@
 # Description
 
-[![Build Status](https://api.travis-ci.com/realityforge/chef-authbind.svg?branch=master)](http://travis-ci.org/realityforge/chef-authbind)
+[![Build Status](https://api.travis-ci.com/realityforge/chef-authbind.svg?branch=master)](http://travis-ci.com/realityforge/chef-authbind)
 
 Install the authbind tool to facilitate launching applications on privileged ports. Also provide several resource definitions for executing a command under authbind.
 
